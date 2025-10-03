@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>BajY45Y3yMhqIYrYDlXlHnSIZej3GVHqx2XwjbFHJqs=_1</activeVersionIdentifier>
+    <developerName>Read_and_Display_Case_Files_Information</developerName>
+    <masterLabel>Read and Display Case Files Information</masterLabel>
+    <templateVersions>
+        <content>You act as an agent and provide an appropriate answer to the user&apos;s query: {!$Input:userQuery}
+ 
+ 
+ 
+###INSTRUCTIONS###
+
+If no relevant information is found in the provided documents, respond with:
+
+&quot;Sorry, no information related to your query was found in the available documents.&quot;
+ 
+</content>
+        <inputs>
+            <apiName>File</apiName>
+            <definition>SOBJECT://ContentDocument</definition>
+            <masterLabel>File</masterLabel>
+            <referenceName>Input:File</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>userQuery</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>userQuery</masterLabel>
+            <referenceName>Input:userQuery</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultVertexAIGemini20FlashLite001</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>BajY45Y3yMhqIYrYDlXlHnSIZej3GVHqx2XwjbFHJqs=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>
